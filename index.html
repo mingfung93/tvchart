@@ -1,0 +1,315 @@
+<html>
+
+<head>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src="./script.js"></script>
+    <style>
+        .parent {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: calc(100vh - 100px);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            margin-top:10px
+        }
+
+        #slideshow {
+
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+
+        }
+
+        #slideshow>div {
+            position: absolute;
+            top: 0px;
+            left: 10px;
+            right: 10px;
+            bottom: 0px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+            {
+                "symbols": [{
+                        "description": "EURUSD",
+                        "proName": "OANDA:EURUSD"
+                    },
+                    {
+                        "description": "NZDUSD",
+                        "proName": "OANDA:NZDUSD"
+                    },
+                    {
+                        "description": "AUDUSD",
+                        "proName": "OANDA:AUDUSD"
+                    },
+                    {
+                        "description": "GBPUSD",
+                        "proName": "OANDA:GBPUSD"
+                    },
+                    {
+                        "description": "USDCHF",
+                        "proName": "OANDA:USDCHF"
+                    },
+                    {
+                        "description": "USDCAD",
+                        "proName": "OANDA:USDCAD"
+                    },
+                    {
+                        "description": "USDJPY",
+                        "proName": "OANDA:USDJPY"
+                    }
+                ],
+                "colorTheme": "light",
+                "isTransparent": false,
+                "showSymbolLogo": true,
+                "largeChartUrl": "https://www.tradingview.com/chart/hyUhZlvj/",
+                "locale": "en"
+            }
+
+        </script>
+    </div>
+
+    <div class="parent">
+        <div style="height:100%;
+                width:100%">
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>
+                    {
+                        "width": "100%",
+                        "height": "100%",
+                        "colorTheme": "light",
+                        "isTransparent": false,
+                        "locale": "en",
+                        "importanceFilter": "-1,0,1",
+                        "currencyFilter": "USD,GBP,AUD,JPY,EUR,NZD,CHF,CAD"
+                    }
+
+                </script>
+            </div>
+        </div>
+        <!-- TradingView Widget END -->
+        <!-- TradingView Widget END -->
+
+
+        <div id="slideshow">
+            <div>
+                <!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container">
+                    <div id="tradingview_e3bdb"></div>
+
+                    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                    <script type="text/javascript">
+                        new TradingView.widget({
+                            "autosize": true,
+                            "symbol": "OANDA:EURUSD",
+                            "interval": "60",
+                            "timezone": "Asia/Hong_Kong",
+                            "theme": "light",
+                            "style": "1",
+                            "locale": "en",
+                            "toolbar_bg": "#f1f3f6",
+                            "enable_publishing": false,
+                            "hide_top_toolbar": true,
+                            "allow_symbol_change": true,
+                            "container_id": "tradingview_e3bdb"
+                        });
+
+                    </script>
+                </div>
+                <!-- TradingView Widget END -->
+            </div>
+            <div>
+                <!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container">
+                    <div id="tradingview_5f153"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                    <script type="text/javascript">
+                        new TradingView.widget({
+                            "autosize": true,
+                            "symbol": "OANDA:GBPUSD",
+                            "interval": "60",
+                            "timezone": "Asia/Hong_Kong",
+                            "theme": "light",
+                            "style": "1",
+                            "locale": "en",
+                            "toolbar_bg": "#f1f3f6",
+                            "enable_publishing": false,
+                            "hide_top_toolbar": true,
+                            "allow_symbol_change": true,
+                            "container_id": "tradingview_5f153"
+                        });
+
+                    </script>
+                </div>
+                <!-- TradingView Widget END -->
+            </div>
+            <div>
+                <!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container">
+                    <div id="tradingview_e8e3d"></div>
+                   
+                    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                    <script type="text/javascript">
+                        new TradingView.widget({
+                            "autosize": true,
+                            "symbol": "OANDA:AUDUSD",
+                            "interval": "60",
+                            "timezone": "Asia/Hong_Kong",
+                            "theme": "light",
+                            "style": "1",
+                            "locale": "en",
+                            "toolbar_bg": "#f1f3f6",
+                            "enable_publishing": false,
+                            "hide_top_toolbar": true,
+                            "allow_symbol_change": true,
+                            "container_id": "tradingview_e8e3d"
+                        });
+
+                    </script>
+                </div>
+                <!-- TradingView Widget END -->
+            </div>
+            <div>
+                <!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container">
+                    <div id="tradingview_4184f"></div>
+                    
+                    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                    <script type="text/javascript">
+                        new TradingView.widget({
+                            "autosize": true,
+                            "symbol": "OANDA:NZDUSD",
+                            "interval": "60",
+                            "timezone": "Asia/Hong_Kong",
+                            "theme": "light",
+                            "style": "1",
+                            "locale": "en",
+                            "toolbar_bg": "#f1f3f6",
+                            "enable_publishing": false,
+                            "hide_top_toolbar": true,
+                            "allow_symbol_change": true,
+                            "container_id": "tradingview_4184f"
+                        });
+
+                    </script>
+                </div>
+                <!-- TradingView Widget END -->
+            </div>
+            <div>
+                <!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container">
+                    <div id="tradingview_58953"></div>
+                  
+                    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                    <script type="text/javascript">
+                        new TradingView.widget({
+                            "autosize": true,
+                            "symbol": "OANDA:USDCHF",
+                            "interval": "60",
+                            "timezone": "Asia/Hong_Kong",
+                            "theme": "light",
+                            "style": "1",
+                            "locale": "en",
+                            "toolbar_bg": "#f1f3f6",
+                            "enable_publishing": false,
+                            "hide_top_toolbar": true,
+                            "allow_symbol_change": true,
+                            "container_id": "tradingview_58953"
+                        });
+
+                    </script>
+                </div>
+                <!-- TradingView Widget END -->
+            </div>
+            <div>
+                <!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container">
+                    <div id="tradingview_4c706"></div>
+                  
+                    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                    <script type="text/javascript">
+                        new TradingView.widget({
+                            "autosize": true,
+                            "symbol": "OANDA:USDCAD",
+                            "interval": "60",
+                            "timezone": "Asia/Hong_Kong",
+                            "theme": "light",
+                            "style": "1",
+                            "locale": "en",
+                            "toolbar_bg": "#f1f3f6",
+                            "enable_publishing": false,
+                            "hide_top_toolbar": true,
+                            "allow_symbol_change": true,
+                            "container_id": "tradingview_4c706"
+                        });
+
+                    </script>
+                </div>
+                <!-- TradingView Widget END -->
+            </div>
+            <div>
+                <!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container">
+                    <div id="tradingview_87a41"></div>
+                   
+                    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                    <script type="text/javascript">
+                        new TradingView.widget({
+                            "autosize": true,
+                            "symbol": "OANDA:USDJPY",
+                            "interval": "60",
+                            "timezone": "Asia/Hong_Kong",
+                            "theme": "light",
+                            "style": "1",
+                            "locale": "en",
+                            "toolbar_bg": "#f1f3f6",
+                            "enable_publishing": false,
+                            "hide_top_toolbar": true,
+                            "allow_symbol_change": true,
+                            "container_id": "tradingview_87a41"
+                        });
+
+                    </script>
+                </div>
+                <!-- TradingView Widget END -->
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- partial -->
+
+</body>
+<script>
+    $("#slideshow > div:gt(0)").hide();
+
+    setInterval(function() {
+        $('#slideshow > div:first')
+            .fadeOut(1000)
+            .next()
+            .fadeIn(1000)
+            .end()
+            .appendTo('#slideshow');
+    }, 10000);
+
+</script>
+
+</html>
