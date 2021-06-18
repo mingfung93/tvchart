@@ -7,7 +7,7 @@
         .parent {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: calc(100vh - 100px);
+            grid-template-rows: calc(100vh - 280px);
             grid-column-gap: 0px;
             grid-row-gap: 0px;
             margin-top:10px
@@ -30,56 +30,147 @@
             bottom: 0px;
         }
 
+.parent1 {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: repeat(2, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
     </style>
 </head>
 
 <body>
 
-  <!-- TradingView Widget BEGIN -->
+
+<div class="parent1">
+<div>
+<!-- TradingView Widget BEGIN -->
 <div class="tradingview-widget-container">
   <div class="tradingview-widget-container__widget"></div>
-
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
   {
-  "symbols": [
-    {
-      "description": "",
-      "proName": "OANDA:EURUSD"
-    },
-    {
-      "description": "",
-      "proName": "OANDA:GBPUSD"
-    },
-    {
-      "description": "",
-      "proName": "OANDA:AUDUSD"
-    },
-    {
-      "description": "",
-      "proName": "OANDA:NZDUSD"
-    },
-    {
-      "description": "",
-      "proName": "OANDA:USDCHF"
-    },
-    {
-      "description": "",
-      "proName": "OANDA:USDCAD"
-    },
-    {
-      "description": "",
-      "proName": "OANDA:USDJPY"
-    }
-  ],
-  "showSymbolLogo": true,
+  "symbol": "OANDA:EURUSD",
+  "width": "100%",
   "colorTheme": "light",
   "isTransparent": false,
-  "displayMode": "compact",
   "locale": "en"
 }
   </script>
 </div>
 <!-- TradingView Widget END -->
+</div>
+<div>
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "OANDA:AUDUSD",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": false,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</div>
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "OANDA:GBPUSD",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": false,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+<div>
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "OANDA:NZDUSD",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": false,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</div>
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "OANDA:USDCHF",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": false,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+<div>
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "OANDA:USDCAD",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": false,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</div>
+
+<div>
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "OANDA:USDJPY",
+  "width": "100%",
+  "colorTheme": "light",
+  "isTransparent": false,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</div>
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+
+</div>
+
+  
 
     <div class="parent">
         <div style="height:100%;
