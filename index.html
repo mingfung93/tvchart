@@ -551,7 +551,7 @@
 <script>
     const tabs = ["EURUSD", "GBPUSD", "AUDUSD", "NZDUSD", "USDCHF", "USDCAD", "USDJPY"];
 
-    var count = tabs.length;
+    var count = 0;
     var counterIncrement = 1;
     var counter = setInterval(timer, 5000);
 
@@ -561,7 +561,7 @@
         if (isChecked) {
             count = count + counterIncrement;
             if (count == tabs.length) {
-                count = 1;
+                count =1;
             }
             openCity(event, tabs[count]);
 
