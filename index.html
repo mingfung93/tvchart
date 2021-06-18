@@ -35,50 +35,51 @@
 
 <body>
 
-    <!-- TradingView Widget BEGIN -->
-    <div class="tradingview-widget-container">
-
-        <div class="tradingview-widget-container__widget"></div>
-        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
-            {
-                "symbols": [{
-                        "description": "EURUSD",
-                        "proName": "OANDA:EURUSD"
-                    },
-                    {
-                        "description": "NZDUSD",
-                        "proName": "OANDA:NZDUSD"
-                    },
-                    {
-                        "description": "AUDUSD",
-                        "proName": "OANDA:AUDUSD"
-                    },
-                    {
-                        "description": "GBPUSD",
-                        "proName": "OANDA:GBPUSD"
-                    },
-                    {
-                        "description": "USDCHF",
-                        "proName": "OANDA:USDCHF"
-                    },
-                    {
-                        "description": "USDCAD",
-                        "proName": "OANDA:USDCAD"
-                    },
-                    {
-                        "description": "USDJPY",
-                        "proName": "OANDA:USDJPY"
-                    }
-                ],
-                "colorTheme": "light",
-                "isTransparent": false,
-                "showSymbolLogo": true,
-                "largeChartUrl": "https://www.tradingview.com/chart/hyUhZlvj/",
-                "locale": "en"
-            }
-
-        </script>
-    </div>
+  <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"><span class="blue-text">Ticker Tape</span></a> by TradingView</div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+  {
+  "symbols": [
+    {
+      "description": "",
+      "proName": "OANDA:EURUSD"
+    },
+    {
+      "description": "",
+      "proName": "OANDA:GBPUSD"
+    },
+    {
+      "description": "",
+      "proName": "OANDA:AUDUSD"
+    },
+    {
+      "description": "",
+      "proName": "OANDA:NZDUSD"
+    },
+    {
+      "description": "",
+      "proName": "OANDA:USDCHF"
+    },
+    {
+      "description": "",
+      "proName": "OANDA:USDCAD"
+    },
+    {
+      "description": "",
+      "proName": "OANDA:USDJPY"
+    }
+  ],
+  "showSymbolLogo": true,
+  "colorTheme": "light",
+  "isTransparent": false,
+  "displayMode": "compact",
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
 
     <div class="parent">
         <div style="height:100%;
