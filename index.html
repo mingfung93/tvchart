@@ -1,7 +1,9 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+
     <script src="./script.js"></script>
     <style>
         .parent {
@@ -10,7 +12,7 @@
             grid-template-rows: calc(100vh - 280px);
             grid-column-gap: 0px;
             grid-row-gap: 0px;
-            margin-top:10px
+            margin-top: 10px
         }
 
         #slideshow {
@@ -30,151 +32,264 @@
             bottom: 0px;
         }
 
-.parent1 {
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-grid-template-rows: repeat(2, 1fr);
-grid-column-gap: 0px;
-grid-row-gap: 0px;
-}
-
-      body{
-          background:black;
+        .parent1 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
         }
-           
+
+        body {
+            background: black;
+        }
+
+
+
+        /* Style the tab */
+        .tab {
+            overflow: hidden;
+            border: 1px solid #383737;
+            background-color: #1e222d;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 9px 16px;
+            transition: 0.3s;
+            font-size: 0.6rem;
+            font-weight: bolder;
+            color: white;
+            background: #1e222d;
+        }
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+            background-color: black;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #404040;
+            border-top: none;
+            height: calc(100% - 43px);
+        }
+
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 30px;
+            height: 15px;
+            margin: 7px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 13px;
+            width: 13px;
+            left: 4px;
+            bottom: 1px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:checked+.slider {
+            background-color: #2196F3;
+        }
+
+        input:focus+.slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked+.slider:before {
+            -webkit-transform: translateX(10px);
+            -ms-transform: translateX(10px);
+            transform: translateX(10px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+
     </style>
 </head>
 
 <body>
 
 
-<div class="parent1">
-<div>
-<!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
-  {
-  "symbol": "OANDA:EURUSD",
-  "width": "100%",
-  "colorTheme": "dark",
-  "isTransparent": false,
-  "locale": "en"
-}
-  </script>
-</div>
-<!-- TradingView Widget END -->
-</div>
-<div>
-<!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
+    <div class="parent1">
+        <div>
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                    {
+                        "symbol": "OANDA:EURUSD",
+                        "width": "100%",
+                        "colorTheme": "dark",
+                        "isTransparent": false,
+                        "locale": "en"
+                    }
 
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
-  {
-  "symbol": "OANDA:AUDUSD",
-  "width": "100%",
-  "colorTheme": "dark",
-  "isTransparent": false,
-  "locale": "en"
-}
-  </script>
-</div>
-<!-- TradingView Widget END -->
-</div>
-<!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
+                </script>
+            </div>
+            <!-- TradingView Widget END -->
+        </div>
+        <div>
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
 
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
-  {
-  "symbol": "OANDA:GBPUSD",
-  "width": "100%",
-  "colorTheme": "dark",
-  "isTransparent": false,
-  "locale": "en"
-}
-  </script>
-</div>
-<!-- TradingView Widget END -->
-<div>
-<!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
-  {
-  "symbol": "OANDA:NZDUSD",
-  "width": "100%",
-  "colorTheme": "dark",
-  "isTransparent": false,
-  "locale": "en"
-}
-  </script>
-</div>
-<!-- TradingView Widget END -->
-</div>
-<!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                    {
+                        "symbol": "OANDA:AUDUSD",
+                        "width": "100%",
+                        "colorTheme": "dark",
+                        "isTransparent": false,
+                        "locale": "en"
+                    }
 
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
-  {
-  "symbol": "OANDA:USDCHF",
-  "width": "100%",
-  "colorTheme": "dark",
-  "isTransparent": false,
-  "locale": "en"
-}
-  </script>
-</div>
-<!-- TradingView Widget END -->
-<div>
-<!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
+                </script>
+            </div>
+            <!-- TradingView Widget END -->
+        </div>
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
 
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
-  {
-  "symbol": "OANDA:USDCAD",
-  "width": "100%",
-  "colorTheme": "dark",
-  "isTransparent": false,
-  "locale": "en"
-}
-  </script>
-</div>
-<!-- TradingView Widget END -->
-</div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                {
+                    "symbol": "OANDA:GBPUSD",
+                    "width": "100%",
+                    "colorTheme": "dark",
+                    "isTransparent": false,
+                    "locale": "en"
+                }
 
-<div>
-<!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
-  {
-  "symbol": "OANDA:USDJPY",
-  "width": "100%",
-  "colorTheme": "dark",
-  "isTransparent": false,
-  "locale": "en"
-}
-  </script>
-</div>
-<!-- TradingView Widget END -->
-</div>
+            </script>
+        </div>
+        <!-- TradingView Widget END -->
+        <div>
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                    {
+                        "symbol": "OANDA:NZDUSD",
+                        "width": "100%",
+                        "colorTheme": "dark",
+                        "isTransparent": false,
+                        "locale": "en"
+                    }
 
-<div>
+                </script>
+            </div>
+            <!-- TradingView Widget END -->
+        </div>
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
 
-</div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                {
+                    "symbol": "OANDA:USDCHF",
+                    "width": "100%",
+                    "colorTheme": "dark",
+                    "isTransparent": false,
+                    "locale": "en"
+                }
 
-<div>
+            </script>
+        </div>
+        <!-- TradingView Widget END -->
+        <div>
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
 
-</div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                    {
+                        "symbol": "OANDA:USDCAD",
+                        "width": "100%",
+                        "colorTheme": "dark",
+                        "isTransparent": false,
+                        "locale": "en"
+                    }
+
+                </script>
+            </div>
+            <!-- TradingView Widget END -->
+        </div>
+
+        <div>
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                    {
+                        "symbol": "OANDA:USDJPY",
+                        "width": "100%",
+                        "colorTheme": "dark",
+                        "isTransparent": false,
+                        "locale": "en"
+                    }
+
+                </script>
+            </div>
+            <!-- TradingView Widget END -->
+        </div>
+
+        <div>
+
+        </div>
+
+        <div>
+
+        </div>
 
 
-</div>
+    </div>
 
-  
+
 
     <div class="parent">
         <div style="height:100%;
@@ -200,9 +315,23 @@ grid-row-gap: 0px;
         <!-- TradingView Widget END -->
         <!-- TradingView Widget END -->
 
+        <div>
+            <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'EURUSD')" id="defaultOpen">EUR/USD</button>
+                <button class="tablinks" onclick="openCity(event, 'GBPUSD')">GBP/USD</button>
+                <button class="tablinks" onclick="openCity(event, 'AUDUSD')">AUD/USD</button>
+                <button class="tablinks" onclick="openCity(event, 'NZDUSD')">NZD/USD</button>
+                <button class="tablinks" onclick="openCity(event, 'USDCHF')">USD/CHF</button>
+                <button class="tablinks" onclick="openCity(event, 'USDCAD')">USD/CAD</button>
+                <button class="tablinks" onclick="openCity(event, 'USDJPY')">USD/JPY</button>
 
-        <div id="slideshow">
-            <div>
+                <label class="switch">
+                    <input id="togger" type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <div id="EURUSD" class="tabcontent">
                 <!-- TradingView Widget BEGIN -->
                 <div class="tradingview-widget-container">
                     <div id="tradingview_e3bdb"></div>
@@ -228,7 +357,8 @@ grid-row-gap: 0px;
                 </div>
                 <!-- TradingView Widget END -->
             </div>
-            <div>
+
+            <div id="GBPUSD" class="tabcontent">
                 <!-- TradingView Widget BEGIN -->
                 <div class="tradingview-widget-container">
                     <div id="tradingview_5f153"></div>
@@ -249,17 +379,16 @@ grid-row-gap: 0px;
                             "container_id": "tradingview_5f153"
                         });
 
-                        
-                        
                     </script>
                 </div>
                 <!-- TradingView Widget END -->
             </div>
-            <div>
+
+            <div id="AUDUSD" class="tabcontent">
                 <!-- TradingView Widget BEGIN -->
                 <div class="tradingview-widget-container">
                     <div id="tradingview_e8e3d"></div>
-                   
+
                     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
                     <script type="text/javascript">
                         new TradingView.widget({
@@ -281,11 +410,12 @@ grid-row-gap: 0px;
                 </div>
                 <!-- TradingView Widget END -->
             </div>
-            <div>
+
+            <div id="NZDUSD" class="tabcontent">
                 <!-- TradingView Widget BEGIN -->
                 <div class="tradingview-widget-container">
                     <div id="tradingview_4184f"></div>
-                    
+
                     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
                     <script type="text/javascript">
                         new TradingView.widget({
@@ -307,11 +437,12 @@ grid-row-gap: 0px;
                 </div>
                 <!-- TradingView Widget END -->
             </div>
-            <div>
+
+            <div id="USDCHF" class="tabcontent">
                 <!-- TradingView Widget BEGIN -->
                 <div class="tradingview-widget-container">
                     <div id="tradingview_58953"></div>
-                  
+
                     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
                     <script type="text/javascript">
                         new TradingView.widget({
@@ -333,11 +464,12 @@ grid-row-gap: 0px;
                 </div>
                 <!-- TradingView Widget END -->
             </div>
-            <div>
+
+            <div id="USDCAD" class="tabcontent">
                 <!-- TradingView Widget BEGIN -->
                 <div class="tradingview-widget-container">
                     <div id="tradingview_4c706"></div>
-                  
+
                     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
                     <script type="text/javascript">
                         new TradingView.widget({
@@ -359,11 +491,12 @@ grid-row-gap: 0px;
                 </div>
                 <!-- TradingView Widget END -->
             </div>
-            <div>
+
+            <div id="USDJPY" class="tabcontent">
                 <!-- TradingView Widget BEGIN -->
                 <div class="tradingview-widget-container">
                     <div id="tradingview_87a41"></div>
-                   
+
                     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
                     <script type="text/javascript">
                         new TradingView.widget({
@@ -392,21 +525,49 @@ grid-row-gap: 0px;
     </div>
 
 
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+
+    </script>
 
     <!-- partial -->
 
 </body>
 <script>
-    $("#slideshow > div:gt(0)").hide();
+    const tabs = ["EURUSD", "GBPUSD", "AUDUSD", "NZDUSD", "USDCHF", "USDCAD", "USDJPY"];
 
-    setInterval(function() {
-        $('#slideshow > div:first')
-            .fadeOut(1000)
-            .next()
-            .fadeIn(1000)
-            .end()
-            .appendTo('#slideshow');
-    }, 7000);
+    var count = tabs.length;
+    var counterIncrement = 1;
+    var counter = setInterval(timer, 5000);
+
+    function timer() {
+
+        var isChecked = document.getElementById("togger").checked;
+        if (isChecked) {
+            count = count + counterIncrement;
+            if (count > tabs.length) {
+                count = 0;
+            }
+            openCity(event, tabs[count]);
+
+        }
+
+    }
 
 </script>
 
