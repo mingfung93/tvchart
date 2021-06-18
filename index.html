@@ -560,7 +560,7 @@
         var isChecked = document.getElementById("togger").checked;
         if (isChecked) {
             count = count + counterIncrement;
-            if (count > tabs.length) {
+            if (count == tabs.length) {
                 count = 0;
             }
             openCity(event, tabs[count]);
